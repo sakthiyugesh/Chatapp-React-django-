@@ -1,0 +1,95 @@
+# React + Django Realtime Chat Application
+
+A real-time chat application built with **React (frontend)** and **Django + Django Channels (backend)**.  
+Features email-based login, WebSocket-based real-time messaging, and Daphne as the ASGI server.
+
+---
+
+## 🚀 Features
+- **Email Login & Registration** (Django Authentication)
+- **Real-time Chat** using WebSockets (Django Channels)
+- **Daphne ASGI Server** for WebSocket handling
+- **REST API** for authentication and message history
+- **Frontend:** React with Hooks and Axios
+- **Backend:** Django, Django Rest Framework, Django Channels, Redis
+- **Secure Secret Key** handling with `.env`
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**
+- React.js
+- Axios
+- React Router
+
+**Backend**
+- Django
+- Django Rest Framework (DRF)
+- Django Channels
+- Redis
+- Daphne
+
+---
+
+## 📦 Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/chat-app.git
+cd chat-app
+
+
+## Backend Setup (Django)
+
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+## Run Migrations & Create Superuser
+
+python manage.py migrate
+python manage.py createsuperuser
+
+## Start daphne server
+
+daphne backend.asgi:application --port 8000
+
+## Frontend setup
+
+cd ../frontend
+npm install
+npm start
+
+
+## project Structure
+
+chat-app/
+│
+├── backend/
+│   ├── backend/             # Django project
+│   ├── api/                 # Django app for chat
+│   ├── db.sqlite3
+│   ├── manage.py
+│   ├── .env
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   ├── package.json
+│   └── public/
+│
+├── .gitignore
+└── README.md
+
+
+#Example Websocket Payload
+
+{
+  "type": "chat_message",
+  "message": "Hello there!",
+  "sender_id": 1,
+  "receiver_id": 2
+}
+

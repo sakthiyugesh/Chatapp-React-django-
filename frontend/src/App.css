@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  /* font-family: ; */
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+:root{
+    --base-color:#584cd7;
+    --base-font: "Poppins", sans-serif; 
+    --base-font-color :#525253;
+    --pale-color: rgb(235, 237, 237);
+}
+
+/* for header */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+
+.container .bottom_menu{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: var(--base-color);
+}
+.container .bottom_menu i{
+    color: white;
+    font-size: 28px;
+}
+
+.container .header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 30px 0px;
+}
+
+.container .header i {
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 10px 8px;
+  /* height: 30px; */
+  /* width: 30px; */
+  margin-right: 7px;
+  color: var(--base-color);
+}
+
+.container .header h4 {
+  /* font-family: sans-serif; */
+  font-size: x-large;
+  font-weight: 700;
+}
+.container .header p {
+  font-weight: 400;
+  font-size: small;
+  color: var(--base-font-color);
+}
+
+.container .sub_header {
+  /* background-color: aqua;; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .sub_header ul {
+  border-radius: 24px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0px;
+  background-color: rgb(235, 237, 237);
+  list-style: none;
+  font-weight: 600;
+  color: var(--base-font-color);
+  width: 320px;
+  position: relative;
+  font-family: var(--base-font);
+}
+/* .container .sub_header ul li {
+    flex: 1;
+} */
+
+
+.container .sub_header ul .active {
+  position: absolute;
+  border-radius: 24px;
+  left: 0;
+  padding: 10px 0px;
+  text-align: center;
+  width: 90px;
+  color: #fff;
+  /* display: none; */
+
+  background-color: var(--base-color);
+}
+
+
+.container .section {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+    /* margin-top: 50px; */
+    color: black;
+}
+
+.container .Link {
+    color: black;
+}
+
+.m-top{
+  margin-top: 70px;
+}
+.container .chat_section{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+    margin: 15px 0px;
+}
+.container .chat_section img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.container .chat_section .chats{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap:15px;
+    flex: 1;
+    /* background-color: #525253; */
+}
+.container .chat_section .chats .chat_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.container .chat_section .timezone{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: end;
+    align-items: center;
+    color: var(--base-font-color);
+}
+.container .chat_section .timezone p{
+    font-size: 12px;
+}
+
+
+.fa-arrow-left{
+  color: black;
+  margin-left: 5px;
+}
+
+
+
+
+.chat-container {
+  width:100%;
+  background: var(--base-color); 
+  color: white;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.chat-header {
+  display: flex;
+  align-items: center;
+  margin: 25px;
+  gap: 10px;
+  background-color: white;
+  border-radius: 28px;
+  padding: 10px ;
+}
+
+.chat-header img {
+  width: 45px;
+  height: 45px;
+  border-radius: 40%;
+}
+
+.chat-header h4 {
+  /* margin: 0; */
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+.chat-header span {
+  font-size: 12px;
+  color: var(--base-font-color);
+}
+
+
+
+/* Messages */
+.message {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin: 0px 25px ;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.message.sent {
+  background: #8d70ff;
+  align-self: flex-end;
+}
+
+.message.received {
+  background: white;
+  color: black;
+  align-self: flex-start;
+}
+
+/* File attachment box */
+.file-box {
+  display: flex;
+  align-items: center;
+  background: #8d70ff;
+  padding: 10px;
+  border-radius: 12px;
+  gap: 10px;
+}
+
+.file-box:hover {
+  background: #a083ff;
+  cursor: pointer;
+}
+
+.file-icon {
+  font-size: 18px;
+}
+
+
+/* Input bar */
+.chat-input {
+  margin-top: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 28px;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input button {
+  background: #6a4cff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+/* Login style */
+
+.login_container{
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+
+}
+.login_container .con{
+  display: flex;
+  justify-content: start;
+  width: 300px;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 70px;
+  padding: 30px;
+
+}
+.login_container p{
+  /* background-color: white; */
+  color: var(--base-font-color);
+  text-align: center;
+  font-size: medium;
+
+}
+
+.login_container .con div{
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.login_container input{
+
+  border: 1px solid var(--base-font-color);
+  background-color: var(--pale-color);
+  outline: none;
+  border-radius: 24px;
+  padding: 18px 25px;
+
+}
+.login_container .con div button{
+
+  border: none;
+  background-color: var(--base-color);
+  margin: auto;
+  border-radius: 28px;
+  padding: 15px 25px;
+  width: 120px;
+  color: white;
+
+}
+.login_container .con div .btn_verify_otp{
+
+  border: none;
+  background-color: green;
+  margin: auto;
+  border-radius: 28px;
+  padding: 15px 25px;
+  width: 120px;
+  color: white;
+
+}
