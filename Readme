@@ -8,11 +8,14 @@ Features email-based login, WebSocket-based real-time messaging, and Daphne as t
 ## 🚀 Features
 - **Email Login & Registration** (Django Authentication)
 - **Real-time Chat** using WebSockets (Django Channels)
+- **Online Status** tracking
+- **Message Read Receipts**
 - **Daphne ASGI Server** for WebSocket handling
 - **REST API** for authentication and message history
 - **Frontend:** React with Hooks and Axios
 - **Backend:** Django, Django Rest Framework, Django Channels, Redis
 - **Secure Secret Key** handling with `.env`
+- **Responsive Design** for mobile and desktop
 
 ---
 
@@ -20,76 +23,51 @@ Features email-based login, WebSocket-based real-time messaging, and Daphne as t
 
 **Frontend**
 - React.js
-- Axios
-- React Router
+- Axios (HTTP requests)
+- React Router (Navigation)
+- WebSocket API (Real-time communication)
 
 **Backend**
-- Django
-- Django Rest Framework (DRF)
-- Django Channels
-- Redis
-- Daphne
+- Django (Python web framework)
+- Django Rest Framework (DRF) for REST API
+- Django Channels (WebSockets)
+- Daphne (ASGI server)
+- SQLite (Database)
 
 ---
 
 ## 📦 Installation & Setup
 
+### Prerequisites
+- Python 3.8+
+- Node.js 14+
+- npm/yarn
+
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/chat-app.git
-cd chat-app
-
-
-## Backend Setup (Django)
+git clone https://github.com/sakthiyugesh/Chatapp-React-django-
 
 cd backend
+
+# Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 
-## Run Migrations & Create Superuser
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your settings (SECRET_KEY, DATABASE_URL, etc.)
 
+# Run migrations
 python manage.py migrate
+
+# Create superuser (admin)
 python manage.py createsuperuser
 
-## Start daphne server
+# Run development server
+python manage.py runserver
 
+# OR run with Daphne for WebSocket support
 daphne backend.asgi:application --port 8000
-
-## Frontend setup
-
-cd ../frontend
-npm install
-npm start
-
-
-## project Structure
-
-chat-app/
-│
-├── backend/
-│   ├── backend/             # Django project
-│   ├── api/                 # Django app for chat
-│   ├── db.sqlite3
-│   ├── manage.py
-│   ├── .env
-│   └── requirements.txt
-│
-├── frontend/
-│   ├── src/
-│   ├── package.json
-│   └── public/
-│
-├── .gitignore
-└── README.md
-
-
-#Example Websocket Payload
-
-{
-  "type": "chat_message",
-  "message": "Hello there!",
-  "sender_id": 1,
-  "receiver_id": 2
-}
-
