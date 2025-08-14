@@ -8,8 +8,6 @@ Features email-based login, WebSocket-based real-time messaging, and Daphne as t
 ## 🚀 Features
 - **Email Login & Registration** (Django Authentication)
 - **Real-time Chat** using WebSockets (Django Channels)
-- **Online Status** tracking
-- **Message Read Receipts**
 - **Daphne ASGI Server** for WebSocket handling
 - **REST API** for authentication and message history
 - **Frontend:** React with Hooks and Axios
@@ -43,9 +41,14 @@ Features email-based login, WebSocket-based real-time messaging, and Daphne as t
 - Node.js 14+
 - npm/yarn
 
-### 1️⃣ Clone the Repository
+###  Clone the Repository
+
 ```bash
 git clone https://github.com/sakthiyugesh/Chatapp-React-django-
+
+
+
+
 
 cd backend
 
@@ -71,3 +74,20 @@ python manage.py runserver
 
 # OR run with Daphne for WebSocket support
 daphne backend.asgi:application --port 8000
+
+
+
+### Frontend setup
+
+```bash
+cd ../frontend
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your backend API URL
+
+# Start development server
+npm start
