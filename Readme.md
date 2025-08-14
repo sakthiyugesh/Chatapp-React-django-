@@ -59,10 +59,6 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your settings (SECRET_KEY, DATABASE_URL, etc.)
-
 # Run migrations
 python manage.py migrate
 
@@ -77,17 +73,12 @@ daphne backend.asgi:application --port 8000
 
 
 
-### Frontend setup
+# Frontend setup
 
-```bash
-cd ../frontend
+cd frontend
 
 # Install dependencies
 npm install
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your backend API URL
-
 # Start development server
-npm start
+npm run dev
